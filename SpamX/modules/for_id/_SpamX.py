@@ -179,6 +179,7 @@ async def help_(_, message: Message):
 
 @Client.on_message(filters.chat(AUTO_REACT) & filters.all)
 async def auto_react(_, message: Message):
-   emoj = random.choice(EMOJI_LIST)if message.from_user.username not in ["MissRose_bot", "SuzuneSuperBot"]:
+   emoj = random.choice(EMOJI_LIST)
+    if message.from_user.username not in ["MissRose_bot", "SuzuneSuperBot"]:
    return
    await message.react(emoji=emoj, big=True)
